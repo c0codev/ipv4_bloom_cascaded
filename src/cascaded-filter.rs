@@ -1,3 +1,6 @@
+#![cfg_attr(not(feature = "std"), no_std)]
+#![cfg_attr(not(feature = "std"), no_main)]
+
 #[deny(unsafe_code)]
 use core::sync::atomic::{AtomicU32, Ordering};
 
@@ -17,22 +20,21 @@ impl CacheLineBlock {
     }
 }
 
-//The formula to get the size of the data is: "usize * 64 bytes"
-
-const L1_BLOCKS: usize = 256; //16KiB
-const L2_BLOCKS: usize = 16384; //1MiB
-const L3_BLOCKS: usize = 131_072; //8MiB
-//Total Structure size per socket: 9.16MiB (0.8 FPR at 5M IPs)
+const L1_BLOCKS: usize = 256;
+const L2_BLOCKS: usize = 16384;
+const L3_BLOCKS: usize = 131_072;
 
 pub struct CascadedFilter {
-    pub master_seed: u32,
+    pub master_seed: AtomicU32,
     pub l1_mem_map: [CacheLineBlock; L1_BLOCKS],
     pub l2_mem_map: [CacheLineBlock; L2_BLOCKS],
     pub l3_mem_map: [CacheLineBlock; L3_BLOCKS],
 }
 
+pub static FILTER: CascadedFilter = CascadedFilter::new(0);
+
 #[inline(always)]
-pub fn genseed(master_seed: &mut u32) {
+pub fn genseed(master_seed: &AtomicU32) {
     let mut seed: u32 = 0;
     let mut success: u8 = 0;
 
@@ -49,11 +51,11 @@ pub fn genseed(master_seed: &mut u32) {
             if success != 0 { break; }
         }
         let tsc_jitter = core::arch::x86_64::_rdtsc() as u32;
-        *master_seed = mix(seed ^ tsc_jitter, 0x9E3779B9);
+        let generated = mix(seed ^ tsc_jitter, 0x9E3779B9);
+        master_seed.store(generated, Ordering::Relaxed);
     }
 }
 
-//Finalizer MurmurHash3 style, used to obtain 3 hashes with Kirsch-Mitzenmacher hashing
 #[inline(always)]
 fn mix(xor: u32, fibonacci: u32) -> u32 {
     let mut hash = xor ^ fibonacci;
@@ -124,15 +126,24 @@ fn derive(ip: u32, master_seed: u32) -> Indexes {
     }
 }
 
-
 impl CascadedFilter {
-    pub const fn new(master_seed: u32) -> Self {
+    pub const fn new(initial_seed: u32) -> Self {
         Self {
-            master_seed,
+            master_seed: AtomicU32::new(initial_seed),
             l1_mem_map: [const { CacheLineBlock::new() }; L1_BLOCKS],
             l2_mem_map: [const { CacheLineBlock::new() }; L2_BLOCKS],
             l3_mem_map: [const { CacheLineBlock::new() }; L3_BLOCKS],
         }
+    }
+
+    #[inline(always)]
+    pub fn update_seed(&self, seed: u32) {
+        self.master_seed.store(seed, Ordering::Relaxed);
+    }
+
+    #[inline(always)]
+    pub fn get_seed(&self) -> u32 {
+        self.master_seed.load(Ordering::Relaxed)
     }
 
     #[cfg(target_arch = "x86_64")]
@@ -152,34 +163,38 @@ impl CascadedFilter {
 
     #[cfg(not(target_arch = "x86_64"))]
     #[inline(always)]
-    fn prefetch(&self, _idx: &Indexes) {
-        //NOP
-    }
-
+    fn prefetch(&self, _idx: &Indexes) { }
 
     #[forbid(unsafe_code)]
     #[inline(always)]
-    pub fn batch_processing(&self, ips: [u32; 8]) -> [u32; 8] {
-        let mut results = [0u32; 8];
+    pub fn batch_processing(&self, ips: [u32; 16]) -> [u32; 16] {
+        let mut results = [0u32; 16];
+        let seed = self.get_seed();
 
-        //Derive Indexes for each IP, then prefetch them accordingly
-        let derived: [Indexes; 8] = [
-            derive(ips[0], self.master_seed),
-            derive(ips[1], self.master_seed),
-            derive(ips[2], self.master_seed),
-            derive(ips[3], self.master_seed),
-            derive(ips[4], self.master_seed),
-            derive(ips[5], self.master_seed),
-            derive(ips[6], self.master_seed),
-            derive(ips[7], self.master_seed),
+        let derived: [Indexes; 16] = [
+            derive(ips[0], seed),
+            derive(ips[1], seed),
+            derive(ips[2], seed),
+            derive(ips[3], seed),
+            derive(ips[4], seed),
+            derive(ips[5], seed),
+            derive(ips[6], seed),
+            derive(ips[7], seed),
+            derive(ips[8], seed),
+            derive(ips[9], seed),
+            derive(ips[10], seed),
+            derive(ips[11], seed),
+            derive(ips[12], seed),
+            derive(ips[13], seed),
+            derive(ips[14], seed),
+            derive(ips[15], seed),
         ];
+
         for derived_ip in &derived {
             self.prefetch(derived_ip);
         }
 
-        //Get the line and integer with fast multi-thread safe loading (Aqquire/Release isn't neccesary for this) and then rotate the result bit_pos times
-        //to determine wheter it's banned or not
-        for i in 0..8 {
+        for i in 0..16 {
             let idx = &derived[i];
 
             let reg_l1 = self.l1_mem_map[idx.l1_cacheline_idx].bits[idx.l1_u32_idx].load(Ordering::Relaxed);
@@ -196,7 +211,6 @@ impl CascadedFilter {
                 l3_result &= (reg_l3 >> idx.l3_bit_pos[k]) & 1;
             }
 
-            // 1 = Pass | 0 = Banned
             results[i] = (l1_result & l2_result & l3_result) ^ 1;
         }
 
@@ -204,7 +218,7 @@ impl CascadedFilter {
     }
 
     pub fn inject_ban(&self, ip: u32) {
-        let idx = derive(ip, self.master_seed);
+        let idx = derive(ip, self.get_seed());
 
         self.l1_mem_map[idx.l1_cacheline_idx].bits[idx.l1_u32_idx].fetch_or(1 << idx.l1_bit_pos, Ordering::Relaxed);
 
@@ -212,5 +226,25 @@ impl CascadedFilter {
             self.l2_mem_map[idx.l2_idx[ban_flag]].bits[idx.l2_u32_idx[ban_flag]].fetch_or(1 << idx.l2_bit_pos[ban_flag], Ordering::Relaxed);
             self.l3_mem_map[idx.l3_idx[ban_flag]].bits[idx.l3_u32_idx[ban_flag]].fetch_or(1 << idx.l3_bit_pos[ban_flag], Ordering::Relaxed);
         }
+    }
+}
+
+// Controladores de entrada para no_std / std
+#[cfg(not(feature = "std"))]
+#[panic_handler]
+fn panic(_info: &core::panic::PanicInfo) -> ! {
+    loop {
+        #[cfg(target_arch = "x86_64")]
+        unsafe { core::arch::x86_64::_mm_pause(); }
+    }
+}
+
+#[cfg(not(feature = "std"))]
+#[no_mangle]
+pub extern "C" fn _start() -> ! {
+    genseed(&FILTER.master_seed);
+    loop {
+        #[cfg(target_arch = "x86_64")]
+        unsafe { core::arch::x86_64::_mm_pause(); }
     }
 }
