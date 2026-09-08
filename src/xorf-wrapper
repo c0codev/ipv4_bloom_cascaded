@@ -12,9 +12,9 @@ impl ThirdPartyXor {
     }
 
     #[inline(always)]
-    pub fn batch_processing(&self, ips: [u32; 8]) -> [u32; 8] {
-        let mut results = [0u32; 8];
-        for i in 0..8 {
+    pub fn batch_processing(&self, ips: [u32; 16]) -> [u32; 16] {
+        let mut results = [0u32; 16];
+        for i in 0..16 {
             let key = ips[i] as u64;
             results[i] = if self.inner.contains(&key) { 0 } else { 1 };
         }
