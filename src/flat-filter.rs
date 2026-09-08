@@ -67,7 +67,7 @@ fn derive_flat(ip: u32, master_seed: u32) -> FlatIndexes {
     let mut u32_idx = [0usize; 7];
     let mut bit_pos = [0u32; 7];
 
-    for i in 0..9 {
+    for i in 0..7 {
         let seed_i = master_seed ^ (0x9e3779b9u32.wrapping_mul(i as u32 + 1));
         let h = mix(ip, seed_i);
 
