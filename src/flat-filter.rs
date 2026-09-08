@@ -38,7 +38,7 @@ pub fn genseed(master_seed: &mut u32) {
 }
 
 #[forbid(unsafe_code)]
-const TOTAL_BLOCKS: usize = 256 + 16_384 + 131_072; // = 147_776 bloques
+const TOTAL_BLOCKS: usize = 147_776 //256 + 16_384 + 131_072 blocks
 
 pub struct FlatBloomFilter {
     pub master_seed: u32,
@@ -56,16 +56,16 @@ fn mix(x: u32, seed: u32) -> u32 {
 }
 
 struct FlatIndexes {
-    idx: [usize; 9],
-    u32_idx: [usize; 9],
-    bit_pos: [u32; 9],
+    idx: [usize; 7],
+    u32_idx: [usize; 7],
+    bit_pos: [u32; 7],
 }
 
 #[inline(always)]
 fn derive_flat(ip: u32, master_seed: u32) -> FlatIndexes {
-    let mut idx = [0usize; 9];
-    let mut u32_idx = [0usize; 9];
-    let mut bit_pos = [0u32; 9];
+    let mut idx = [0usize; 7];
+    let mut u32_idx = [0usize; 7];
+    let mut bit_pos = [0u32; 7];
 
     for i in 0..9 {
         let seed_i = master_seed ^ (0x9e3779b9u32.wrapping_mul(i as u32 + 1));
@@ -96,7 +96,7 @@ impl FlatBloomFilter {
         for i in 0..8 {
             let idx = derive_flat(ips[i], self.master_seed);
             let mut all_set = 1u32;
-            for hash in 0..9 {
+            for hash in 0..7 {
                 let reg = self.mem_map[idx.idx[hash]].bits[idx.u32_idx[hash]].load(Ordering::Relaxed);
                 all_set &= (reg >> idx.bit_pos[hash]) & 1;
             }
@@ -108,7 +108,7 @@ impl FlatBloomFilter {
 
     pub fn inject_ban(&self, ip: u32) {
         let idx = derive_flat(ip, self.master_seed);
-        for ban_flag in 0..9 {
+        for ban_flag in 0..7 {
             self.mem_map[idx.idx[ban_flag]].bits[idx.u32_idx[ban_flag]]
                 .fetch_or(1 << idx.bit_pos[ban_flag], Ordering::Relaxed);
         }
