@@ -1,0 +1,3 @@
+# Change this if you want advanced/specific compiling (e.g. enable pgo profiling, specific instructions, specific target-cpu, etc...)
+[build]
+rustflags = ["-C", "target-cpu=native"]
