@@ -38,7 +38,7 @@ pub fn genseed(master_seed: &mut u32) {
 }
 
 #[forbid(unsafe_code)]
-const TOTAL_BLOCKS: usize = 147_776 //256 + 16_384 + 131_072 blocks
+const TOTAL_BLOCKS: usize = 147_776; //256 + 16_384 + 131_072 blocks
 
 pub struct FlatBloomFilter {
     pub master_seed: u32,
