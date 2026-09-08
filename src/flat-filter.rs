@@ -16,7 +16,7 @@ impl CacheLineBlock {
 }
 
 #[inline(always)]
-pub fn genseed(master_seed: &mut u32) {
+pub fn genseed(master_seed: &mut AtomicU32) {
     let mut seed: u32 = 0;
     let mut success: u8 = 0;
 
@@ -33,17 +33,20 @@ pub fn genseed(master_seed: &mut u32) {
             if success != 0 { break; }
         }
         let tsc_jitter = core::arch::x86_64::_rdtsc() as u32;
-        *master_seed = mix(seed ^ tsc_jitter, 0x9E3779B9);
+        let generated = mix(seed ^ tsc_jitter, 0x9E3779B9);
+        master_seed.store(generated, Ordering::Relaxed);
     }
 }
 
 #[forbid(unsafe_code)]
-const TOTAL_BLOCKS: usize = 147_776; //256 + 16_384 + 131_072 blocks
+const TOTAL_BLOCKS: usize = 147_776; // 256 + 16384 + 131072 blocks
 
 pub struct FlatBloomFilter {
-    pub master_seed: u32,
+    pub master_seed: AtomicU32,
     pub mem_map: [CacheLineBlock; TOTAL_BLOCKS],
 }
+
+pub static FLAT_FILTER: FlatBloomFilter = FlatBloomFilter::new(AtomicU32::new(0));
 
 #[inline(always)]
 fn mix(x: u32, seed: u32) -> u32 {
@@ -62,13 +65,13 @@ struct FlatIndexes {
 }
 
 #[inline(always)]
-fn derive_flat(ip: u32, master_seed: u32) -> FlatIndexes {
+fn derive_flat(ip: u32, seed_val: u32) -> FlatIndexes {
     let mut idx = [0usize; 7];
     let mut u32_idx = [0usize; 7];
     let mut bit_pos = [0u32; 7];
 
     for i in 0..7 {
-        let seed_i = master_seed ^ (0x9e3779b9u32.wrapping_mul(i as u32 + 1));
+        let seed_i = seed_val ^ (0x9e3779b9u32.wrapping_mul(i as u32 + 1));
         let h = mix(ip, seed_i);
 
         idx[i] = ((h as u64 * TOTAL_BLOCKS as u64) >> 32) as usize;
@@ -82,7 +85,7 @@ fn derive_flat(ip: u32, master_seed: u32) -> FlatIndexes {
 }
 
 impl FlatBloomFilter {
-    pub const fn new(master_seed: u32) -> Self {
+    pub const fn new(master_seed: AtomicU32) -> Self {
         Self {
             master_seed,
             mem_map: [const { CacheLineBlock::new() }; TOTAL_BLOCKS],
@@ -90,11 +93,22 @@ impl FlatBloomFilter {
     }
 
     #[inline(always)]
-    pub fn batch_processing(&self, ips: [u32; 8]) -> [u32; 8] {
-        let mut results = [0u32; 8];
+    pub fn update_seed(&self, seed: u32) {
+        self.master_seed.store(seed, Ordering::Relaxed);
+    }
 
-        for i in 0..8 {
-            let idx = derive_flat(ips[i], self.master_seed);
+    #[inline(always)]
+    pub fn get_seed(&self) -> u32 {
+        self.master_seed.load(Ordering::Relaxed)
+    }
+
+    #[inline(always)]
+    pub fn batch_processing(&self, ips: [u32; 16]) -> [u32; 16] {
+        let mut results = [0u32; 16];
+        let seed_val = self.get_seed();
+
+        for i in 0..16 {
+            let idx = derive_flat(ips[i], seed_val);
             let mut all_set = 1u32;
             for hash in 0..7 {
                 let reg = self.mem_map[idx.idx[hash]].bits[idx.u32_idx[hash]].load(Ordering::Relaxed);
@@ -107,10 +121,10 @@ impl FlatBloomFilter {
     }
 
     pub fn inject_ban(&self, ip: u32) {
-        let idx = derive_flat(ip, self.master_seed);
+        let seed_val = self.get_seed();
+        let idx = derive_flat(ip, seed_val);
         for ban_flag in 0..7 {
-            self.mem_map[idx.idx[ban_flag]].bits[idx.u32_idx[ban_flag]]
-                .fetch_or(1 << idx.bit_pos[ban_flag], Ordering::Relaxed);
+            self.mem_map[idx.idx[ban_flag]].bits[idx.u32_idx[ban_flag]].fetch_or(1 << idx.bit_pos[ban_flag], Ordering::Relaxed);
         }
     }
 }
