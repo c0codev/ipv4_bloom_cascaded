@@ -1,9 +1,9 @@
-use cascaded_filter::{CascadedFilter, genseed};
-use bloomfilter_wrapper::ThirdPartyBloom;
-use cuckoofilter_wrapper::ThirdPartyCuckoo;
-use xorf_wrapper::ThirdPartyXor;
-use flat_filter::FlatBloomFilter;
-use fastbloom_wrapper::ThirdPartyFastBloom;
+use ipv4_bloom_cascaded::cascaded_filter::{CascadedFilter, genseed};
+use ipv4_bloom_cascaded::bloomfilter_wrapper::ThirdPartyBloom;
+use ipv4_bloom_cascaded::cuckoofilter_wrapper::ThirdPartyCuckoo;
+use ipv4_bloom_cascaded::xorf_wrapper::ThirdPartyXor;
+use ipv4_bloom_cascaded::flat_filter::FlatBloomFilter;
+use ipv4_bloom_cascaded::fastbloom_wrapper::ThirdPartyFastBloom;
 
 use criterion::{criterion_group, criterion_main, Criterion, Throughput};
 use rand::Rng;
