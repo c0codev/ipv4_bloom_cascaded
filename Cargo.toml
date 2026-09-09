@@ -6,11 +6,11 @@ edition = "2021"
 [features]
 default = ["std"]
 std = [
-    "dep:bloomfilter",
-    "dep:cuckoofilter",
-    "dep:xorf",
-    "dep:fastbloom",
-    "dep:rand",
+"dep:bloomfilter",
+"dep:cuckoofilter",
+"dep:xorf",
+"dep:fastbloom",
+"dep:rand",
 ]
 baremetal = []
 
