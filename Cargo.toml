@@ -30,6 +30,10 @@ path = "benches/criterion_benchmark.rs"
 harness = false
 required-features = ["std"]
 
+[[bin]]
+name = "ipv4_bloom_cascaded"
+path = "src/benchmark.rs"
+
 [profile.release]
 opt-level = 3
 lto = true
