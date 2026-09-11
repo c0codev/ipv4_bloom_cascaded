@@ -8,7 +8,7 @@ pub struct ThirdPartyBloom {
 
 impl ThirdPartyBloom {
     pub fn new(expected_items: usize, target_fp_rate: f64) -> Self {
-        let bloom = Bloom::new_for_fp_rate(expected_items, target_fp_rate).expect("Critical Error: Invalid parameters for Bloom filter initialization (check fp_rate or capacity bounds)");
+        let bloom = Bloom::new_for_fp_rate(expected_items, target_fp_rate).expect(" ❌ Critical Error: Invalid parameters for Bloom filter initialization (check fp_rate or capacity bounds) ❌ ");
         Self { inner: bloom, expected_items, target_fp_rate, }
     }
 
@@ -16,7 +16,7 @@ impl ThirdPartyBloom {
         let bytes = Bloom::<[u8]>::compute_bitmap_size(self.expected_items, self.target_fp_rate);
         let m_bits = (bytes as u64) * 8;
         let mib = bytes as f64 / 1024.0 / 1024.0;
-        eprintln!("DEBUG: Bloom uses {} bits ({:.2} MiB) for n={}, p={}", m_bits, mib, self.expected_items, self.target_fp_rate);
+        eprintln!("  🤖 DEBUG: Bloom uses {} bits ({:.2} MiB) for n={}, p={} 💾 ", m_bits, mib, self.expected_items, self.target_fp_rate);
     }
 
     #[inline(always)]
