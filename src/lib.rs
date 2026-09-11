@@ -1,11 +1,11 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 #![cfg_attr(feature = "baremetal", no_main)]
 
-//Main module (always compile either std or no_std/baremetal)
+// --- ‼️ Main module (always compile either std or no_std/baremetal) 🛠️ ---
 pub mod cascaded_filter;
 
 
-//Benchmarking modules (std_only)
+// --- ❗ Benchmarking modules (std_only) 🔨 ---
 #[cfg(feature = "std")]
 pub mod bloomfilter_wrapper;
 #[cfg(feature = "std")]
