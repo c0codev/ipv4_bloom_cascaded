@@ -17,7 +17,7 @@ impl ThirdPartyCuckoo {
         }
     }
 
-//START DEBUG
+// --- 🎬 START DEBUGGING CODE ⚙️ ---
 const BUCKET_SIZE: usize = 4;
 fn calculate_actual_capacity(requested_capacity: usize) -> usize {
     if requested_capacity == 0 {
@@ -40,11 +40,11 @@ pub fn debug_capacity_info(&self, requested_capacity: usize) {
     };
 
     eprintln!(
-        "DEBUG: Inserted={}/{} (Requested={}), Load Factor={:.2}%", 
+        "  🤖 DEBUG: Inserted={}/{} (Requested={}), Load Factor={:.2}% 💾 ", 
         inserted_items, max_capacity, requested_capacity, load_factor
     );
 }
-//END DEBUG
+// --- 🎬 END DEBUGGING CODE ⚙️ ---
 
     #[inline(always)]
     pub fn batch_processing(&mut self, ips: [u32; 16]) -> [u32; 16] {
