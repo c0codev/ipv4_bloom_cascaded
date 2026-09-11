@@ -7,7 +7,7 @@ pub struct ThirdPartyXor {
 impl ThirdPartyXor {
     pub fn build(attacker_ips: &[u32]) -> Self {
         let keys: Vec<u64> = attacker_ips.iter().map(|&ip| ip as u64).collect();
-        let inner = Xor8::try_from(keys.as_slice()).expect("xorf build failed (probably due to duplicate keys and internal hash colissions)");
+        let inner = Xor8::try_from(keys.as_slice()).expect(" ❌ Xorf build failed (probably due to duplicate keys and internal hash colissions) ❌");
         Self { inner }
     }
 
