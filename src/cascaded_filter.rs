@@ -4,9 +4,6 @@
 #[deny(unsafe_code)]
 use core::sync::atomic::{AtomicU32, Ordering};
 
-#[cfg(target_arch = "x86_64")]
-use core::arch::x86_64::{_mm_prefetch, _MM_HINT_T1, _MM_HINT_T2};
-
 #[repr(align(64))]
 pub struct CacheLineBlock {
     pub bits: [AtomicU32; 16],
@@ -58,12 +55,11 @@ pub fn genseed(master_seed: &AtomicU32) {
 
 #[inline(always)]
 fn mix(xor: u32, fibonacci: u32) -> u32 {
-    let mut hash = xor ^ fibonacci;
-    hash = hash.wrapping_mul(0x85ebca6b);
-    hash ^= hash >> 13;
-    hash = hash.wrapping_mul(0xc2b2ae35);
-    hash ^= hash >> 16;
-    hash
+    let hash = xor ^ fibonacci;
+    let mut h = hash.wrapping_mul(0xcc9e2d51);
+    h = h.rotate_left(15);
+    h = h.wrapping_mul(0x1b873593);
+    h ^ (h >> 13)
 }
 
 #[deny(unsafe_code)]
@@ -91,27 +87,45 @@ fn derive(ip: u32, master_seed: u32) -> Indexes {
     let l1_u32_idx = ((hash1 >> 8) & 0xF) as usize;
     let l1_bit_pos = (hash1 >> 12) & 0x1F;
 
-    let hashes = [hash1, hash2, hash3];
+    let h_l2_0 = hash1;
+    let h_l2_1 = hash1.wrapping_add(hash2);
+    let h_l2_2 = h_l2_1.wrapping_add(hash2);
 
-    let mut l2_idx = [0usize; 3];
-    let mut l2_u32_idx = [0usize; 3];
-    let mut l2_bit_pos = [0u32; 3];
+    let l2_idx = [
+        (h_l2_0 & 0x3FFF) as usize,
+        (h_l2_1 & 0x3FFF) as usize,
+        (h_l2_2 & 0x3FFF) as usize,
+    ];
+    let l2_u32_idx = [
+        ((h_l2_0 >> 14) & 0xF) as usize,
+        ((h_l2_1 >> 14) & 0xF) as usize,
+        ((h_l2_2 >> 14) & 0xF) as usize,
+    ];
+    let l2_bit_pos = [
+        (h_l2_0 >> 18) & 0x1F,
+        (h_l2_1 >> 18) & 0x1F,
+        (h_l2_2 >> 18) & 0x1F,
+    ];
 
-    let mut l3_idx = [0usize; 3];
-    let mut l3_u32_idx = [0usize; 3];
-    let mut l3_bit_pos = [0u32; 3];
+    let h_l3_0 = hash2;
+    let h_l3_1 = hash2.wrapping_add(hash3);
+    let h_l3_2 = h_l3_1.wrapping_add(hash3);
 
-    for i in 0..3 {
-        let hash = hashes[i];
-
-        l2_idx[i] = (hash & 0x3FFF) as usize;
-        l2_u32_idx[i] = ((hash >> 14) & 0xF) as usize;
-        l2_bit_pos[i] = (hash >> 18) & 0x1F;
-
-        l3_idx[i] = (hash & 0x1FFFF) as usize;
-        l3_u32_idx[i] = ((hash >> 17) & 0xF) as usize;
-        l3_bit_pos[i] = (hash >> 21) & 0x1F;
-    }
+    let l3_idx = [
+        (h_l3_0 & 0x1FFFF) as usize,
+        (h_l3_1 & 0x1FFFF) as usize,
+        (h_l3_2 & 0x1FFFF) as usize,
+    ];
+    let l3_u32_idx = [
+        ((h_l3_0 >> 17) & 0xF) as usize,
+        ((h_l3_1 >> 17) & 0xF) as usize,
+        ((h_l3_2 >> 17) & 0xF) as usize,
+    ];
+    let l3_bit_pos = [
+        (h_l3_0 >> 21) & 0x1F,
+        (h_l3_1 >> 21) & 0x1F,
+        (h_l3_2 >> 21) & 0x1F,
+    ];
 
     Indexes {
         l1_cacheline_idx,
@@ -146,24 +160,6 @@ impl CascadedFilter {
         self.master_seed.load(Ordering::Relaxed)
     }
 
-    #[cfg(target_arch = "x86_64")]
-    #[inline(always)]
-    fn prefetch(&self, idx: &Indexes) {
-        #[allow(unsafe_code)]
-        unsafe {
-            for i in 0..3 {
-                let l2_pointer = &self.l2_mem_map[idx.l2_idx[i]] as *const CacheLineBlock as *const i8;
-                _mm_prefetch::<_MM_HINT_T1>(l2_pointer);
-
-                let l3_pointer = &self.l3_mem_map[idx.l3_idx[i]] as *const CacheLineBlock as *const i8;
-                _mm_prefetch::<_MM_HINT_T2>(l3_pointer);
-            }
-        }
-    }
-
-    #[cfg(not(target_arch = "x86_64"))]
-    #[inline(always)]
-    fn prefetch(&self, _idx: &Indexes) { }
 
     #[forbid(unsafe_code)]
     #[inline(always)]
@@ -171,47 +167,75 @@ impl CascadedFilter {
         let mut results = [0u32; 16];
         let seed = self.get_seed();
 
-        let derived: [Indexes; 16] = [
-            derive(ips[0], seed),
-            derive(ips[1], seed),
-            derive(ips[2], seed),
-            derive(ips[3], seed),
-            derive(ips[4], seed),
-            derive(ips[5], seed),
-            derive(ips[6], seed),
-            derive(ips[7], seed),
-            derive(ips[8], seed),
-            derive(ips[9], seed),
-            derive(ips[10], seed),
-            derive(ips[11], seed),
-            derive(ips[12], seed),
-            derive(ips[13], seed),
-            derive(ips[14], seed),
-            derive(ips[15], seed),
-        ];
+        let seed_xor2 = seed ^ 0x27d4_eb2f;
+        let seed_xor3 = seed ^ 0x9e37_79b9;
 
-        for derived_ip in &derived {
-            self.prefetch(derived_ip);
+        let mut h1 = [0u32; 16];
+        let mut h2 = [0u32; 16];
+        let mut h3 = [0u32; 16];
+
+        let mut l1_results = [0u32; 16];
+
+
+        for i in 0..16 { h1[i] = mix(ips[i], seed); }
+        for i in 0..16 { h2[i] = mix(ips[i], seed_xor2); }
+        for i in 0..16 { h3[i] = mix(ips[i], seed_xor3); }
+
+        for i in 0..16 {
+            let hash1 = h1[i];
+            let l1_cacheline_idx = (hash1 & 0xFF) as usize;
+            let l1_u32_idx = ((hash1 >> 8) & 0xF) as usize;
+            let l1_bit_pos = (hash1 >> 12) & 0x1F;
+
+            let reg_l1 = self.l1_mem_map[l1_cacheline_idx].bits[l1_u32_idx].load(Ordering::Relaxed);
+            l1_results[i] = (reg_l1 >> l1_bit_pos) & 1;
         }
 
         for i in 0..16 {
-            let idx = &derived[i];
+            let l1_res = l1_results[i];
 
-            let reg_l1 = self.l1_mem_map[idx.l1_cacheline_idx].bits[idx.l1_u32_idx].load(Ordering::Relaxed);
-            let l1_result = (reg_l1 >> idx.l1_bit_pos) & 1;
+            // --- ✅ If L1 = 0, force L2/L3 to also output 0 on the last operation with mask_u32 🔨 ---
+            let mask = (0u32.wrapping_sub(l1_res)) as usize;
+            let mask_u32 = mask as u32;
 
-            let mut l2_result = 1u32;
-            let mut l3_result = 1u32;
+            let hash1 = h1[i];
+            let hash2 = h2[i];
+            let hash3 = h3[i];
 
-            for k in 0..3 {
-                let reg_l2 = self.l2_mem_map[idx.l2_idx[k]].bits[idx.l2_u32_idx[k]].load(Ordering::Relaxed);
-                l2_result &= (reg_l2 >> idx.l2_bit_pos[k]) & 1;
+            // --- 🥇 L2_0 Index 🥇 ---
+            let h_l2_0 = hash1;
+            let l2_idx_0 = ((h_l2_0 & 0x3FFF) as usize) & mask;
+            let r_l2_0 = (self.l2_mem_map[l2_idx_0].bits[((h_l2_0 >> 14) & 0xF) as usize].load(Ordering::Relaxed) >> ((h_l2_0 >> 18) & 0x1F)) & 1;
 
-                let reg_l3 = self.l3_mem_map[idx.l3_idx[k]].bits[idx.l3_u32_idx[k]].load(Ordering::Relaxed);
-                l3_result &= (reg_l3 >> idx.l3_bit_pos[k]) & 1;
-            }
+            // --- 🥇 L3_0 Index 🥇 ---
+            let h_l3_0 = hash2;
+            let l3_idx_0 = ((h_l3_0 & 0x1FFFF) as usize) & mask;
+            let r_l3_0 = (self.l3_mem_map[l3_idx_0].bits[((h_l3_0 >> 17) & 0xF) as usize].load(Ordering::Relaxed) >> ((h_l3_0 >> 21) & 0x1F)) & 1;
 
-            results[i] = (l1_result & l2_result & l3_result) ^ 1;
+            // --- 🥈 L2_1 Index 🥈 ---
+            let h_l2_1 = hash1.wrapping_add(hash2);
+            let l2_idx_1 = ((h_l2_1 & 0x3FFF) as usize) & mask;
+            let r_l2_1 = (self.l2_mem_map[l2_idx_1].bits[((h_l2_1 >> 14) & 0xF) as usize].load(Ordering::Relaxed) >> ((h_l2_1 >> 18) & 0x1F)) & 1;
+
+            // --- 🥈 L3_1 Index 🥈 ---
+            let h_l3_1 = hash2.wrapping_add(hash3);
+            let l3_idx_1 = ((h_l3_1 & 0x1FFFF) as usize) & mask;
+            let r_l3_1 = (self.l3_mem_map[l3_idx_1].bits[((h_l3_1 >> 17) & 0xF) as usize].load(Ordering::Relaxed) >> ((h_l3_1 >> 21) & 0x1F)) & 1;
+
+            // --- 🥉 L2_2 Index 🥉 ---
+            let h_l2_2 = hash1.wrapping_add(hash2.wrapping_mul(2));
+            let l2_idx_2 = ((h_l2_2 & 0x3FFF) as usize) & mask;
+            let r_l2_2 = (self.l2_mem_map[l2_idx_2].bits[((h_l2_2 >> 14) & 0xF) as usize].load(Ordering::Relaxed) >> ((h_l2_2 >> 18) & 0x1F)) & 1;
+
+            // --- 🥉 L3_2 Index 🥉 ---
+            let h_l3_2 = hash2.wrapping_add(hash3.wrapping_mul(2));
+            let l3_idx_2 = ((h_l3_2 & 0x1FFFF) as usize) & mask;
+            let r_l3_2 = (self.l3_mem_map[l3_idx_2].bits[((h_l3_2 >> 17) & 0xF) as usize].load(Ordering::Relaxed) >> ((h_l3_2 >> 21) & 0x1F)) & 1;
+
+            let l2_final = r_l2_0 & r_l2_1 & r_l2_2;
+            let l3_final = r_l3_0 & r_l3_1 & r_l3_2;
+
+            results[i] = ((l2_final & l3_final) & mask_u32) ^ 1;
         }
 
         results
@@ -229,7 +253,6 @@ impl CascadedFilter {
     }
 }
 
-// Controladores de entrada para no_std / std
 #[cfg(not(feature = "std"))]
 #[panic_handler]
 fn panic(_info: &core::panic::PanicInfo) -> ! {
