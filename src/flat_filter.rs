@@ -1,4 +1,4 @@
-//Cascaded Filter Flat Mem Map Design
+// --- 🌩️ Cascaded Filter Flat Memory Map Design 🌩️ ---
 #[deny(unsafe_code)]
 use core::sync::atomic::{AtomicU32, Ordering};
 
@@ -39,7 +39,7 @@ pub fn genseed(master_seed: &mut AtomicU32) {
 }
 
 #[forbid(unsafe_code)]
-const TOTAL_BLOCKS: usize = 147_776; // 256 + 16384 + 131072 blocks
+const TOTAL_BLOCKS: usize = 147_776; // --- ➕ (256 + 16384 + 131072) blocks ⏹️ ---
 
 pub struct FlatBloomFilter {
     pub master_seed: AtomicU32,
