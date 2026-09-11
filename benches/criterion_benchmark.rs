@@ -56,10 +56,10 @@ fn bench_all_filters(c: &mut Criterion) {
 
             (cascaded, third_party_bloom, third_party_cuckoo, xor_filter, flat_bloom, fast_bloom, traffic)
         })
-        .expect("Couldn't create big-stack thread");
+        .expect(" ❌ Couldn't create big-stack thread ❌ ");
 
     let (cascaded, third_party_bloom, mut third_party_cuckoo, xor_filter, flat_bloom, fast_bloom, traffic) = 
-        handle.join().expect("Thread panic");
+        handle.join().expect(" ❌ Thread panic 🧵 ");
 
     let mut group = c.benchmark_group("IPv4_Filter_Comparison");
     group.throughput(Throughput::Elements(16));
