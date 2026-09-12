@@ -1,11 +1,11 @@
 === lscpu information ===
 
-Nombre del modelo:                        AMD Ryzen 7 5800X 8-Core Processor
+Model name:                        AMD Ryzen 7 5800X 8-Core Processor
 «Socket(s)»:                              1
-Caché L1d:                                256 KiB (8 instancias)
-Caché L1i:                                256 KiB (8 instancias)
-Caché L2:                                 4 MiB (8 instancias)
-Caché L3:                                 32 MiB (1 instancia)
+L1d cache:                                256 KiB (8 instances)
+L1i cache:                                256 KiB (8 instances)
+L2 cache:                                 4 MiB (8 instances)
+L3 cache:                                 32 MiB (1 instance)
 
 === Total nproc OS cores ===
 16
