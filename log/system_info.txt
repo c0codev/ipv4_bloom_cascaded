@@ -1,0 +1,9 @@
+=== System Hardware (dmidecode) ===
+
+ASUS
+American Megatrends Inc.
+
+=== Compiler Version ===
+
+rustc 1.93.1 (01f6ddf75 2026-02-11)
+Linux localhost.localdomain 6.18.33-gentoo-r1-tkg-bore #1 SMP PREEMPT_DYNAMIC Sun Jun  7 00:13:15 -00 2026 x86_64 AMD Ryzen 7 5800X 8-Core Processor AuthenticAMD GNU/Linux

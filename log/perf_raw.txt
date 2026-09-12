@@ -1,0 +1,1288 @@
+
+=== cascaded ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0xF15AA2E 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         115.12 Mpps 📊 
+    - ⏳ Average Latency:     8.687 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4641% (23204/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0x2A749F69 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         114.32 Mpps 📊 
+    - ⏳ Average Latency:     8.748 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4718% (23590/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0x25D1EB6E 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         119.35 Mpps 📊 
+    - ⏳ Average Latency:     8.378 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4703% (23513/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0xA718AABD 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         114.64 Mpps 📊 
+    - ⏳ Average Latency:     8.723 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4724% (23621/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0x2E798F2E 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         115.67 Mpps 📊 
+    - ⏳ Average Latency:     8.645 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4640% (23198/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0xD940359A 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         109.06 Mpps 📊 
+    - ⏳ Average Latency:     9.170 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4624% (23118/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0x77F46E8C 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         112.84 Mpps 📊 
+    - ⏳ Average Latency:     8.862 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4649% (23243/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0x2BEF490C 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         114.57 Mpps 📊 
+    - ⏳ Average Latency:     8.729 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4704% (23522/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0x67C9FC4F 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         113.68 Mpps 📊 
+    - ⏳ Average Latency:     8.797 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4681% (23405/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0x918CE9E5 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         120.48 Mpps 📊 
+    - ⏳ Average Latency:     8.300 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4703% (23515/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+ Performance counter stats for './target/release/ipv4_bloom_cascaded cascaded' (10 runs):
+
+     2.673.801.646      cycles                                                                  ( +-  0,52% )
+     3.816.631.466      instructions                     #    1,43  insn per cycle              ( +-  0,03% )
+       705.811.522      L1-dcache-loads                                                         ( +-  0,11% )
+       163.221.800      L1-dcache-load-misses            #   23,13% of all L1-dcache accesses   ( +-  0,04% )
+            36.688      L1-icache-load-misses                                                   ( +-  2,88% )
+
+           0,57393 +- 0,00231 seconds time elapsed  ( +-  0,40% )
+
+
+=== bloom ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         32.89 Mpps 📊 
+    - ⏳ Average Latency:     30.405 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0621% (3103/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         32.38 Mpps 📊 
+    - ⏳ Average Latency:     30.888 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0620% (3101/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         32.19 Mpps 📊 
+    - ⏳ Average Latency:     31.067 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0643% (3215/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         33.07 Mpps 📊 
+    - ⏳ Average Latency:     30.235 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0633% (3165/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         32.36 Mpps 📊 
+    - ⏳ Average Latency:     30.898 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0621% (3103/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         32.50 Mpps 📊 
+    - ⏳ Average Latency:     30.772 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0633% (3165/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         32.96 Mpps 📊 
+    - ⏳ Average Latency:     30.339 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0641% (3204/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         32.81 Mpps 📊 
+    - ⏳ Average Latency:     30.478 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0625% (3125/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         33.06 Mpps 📊 
+    - ⏳ Average Latency:     30.248 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0617% (3087/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         33.56 Mpps 📊 
+    - ⏳ Average Latency:     29.801 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0615% (3075/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+ Performance counter stats for './target/release/ipv4_bloom_cascaded bloom' (10 runs):
+
+     4.562.047.792      cycles                                                                  ( +-  0,21% )
+     7.204.585.835      instructions                     #    1,58  insn per cycle              ( +-  0,01% )
+     1.421.292.716      L1-dcache-loads                                                         ( +-  0,07% )
+       125.294.786      L1-dcache-load-misses            #    8,82% of all L1-dcache accesses   ( +-  0,04% )
+           104.257      L1-icache-load-misses                                                   ( +-  3,60% )
+
+           0,98969 +- 0,00291 seconds time elapsed  ( +-  0,29% )
+
+
+=== cuckoo ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.8ns, p99=110ns, max=29860ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.59 Mpps 📊 
+    - ⏳ Average Latency:     22.941 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8660% (93301/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=54.6ns, p99=120ns, max=193590ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         42.57 Mpps 📊 
+    - ⏳ Average Latency:     23.492 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8625% (93124/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=57.3ns, p99=130ns, max=184030ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         42.89 Mpps 📊 
+    - ⏳ Average Latency:     23.314 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8601% (93003/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.4ns, p99=110ns, max=5990ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.77 Mpps 📊 
+    - ⏳ Average Latency:     22.848 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8520% (92598/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.3ns, p99=110ns, max=5860ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.72 Mpps 📊 
+    - ⏳ Average Latency:     22.875 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8534% (92669/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.4ns, p99=110ns, max=6100ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.83 Mpps 📊 
+    - ⏳ Average Latency:     22.814 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8634% (93169/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.4ns, p99=110ns, max=6310ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.03 Mpps 📊 
+    - ⏳ Average Latency:     23.240 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8547% (92736/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.4ns, p99=110ns, max=24680ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.75 Mpps 📊 
+    - ⏳ Average Latency:     22.859 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8499% (92493/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.4ns, p99=110ns, max=5960ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.93 Mpps 📊 
+    - ⏳ Average Latency:     22.765 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8768% (93842/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=52.2ns, p99=110ns, max=7010ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         43.81 Mpps 📊 
+    - ⏳ Average Latency:     22.826 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8589% (92944/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+ Performance counter stats for './target/release/ipv4_bloom_cascaded cuckoo' (10 runs):
+
+     5.051.031.595      cycles                                                                  ( +-  0,40% )
+     9.920.381.503      instructions                     #    1,96  insn per cycle              ( +-  0,02% )
+     1.828.583.170      L1-dcache-loads                                                         ( +-  0,07% )
+        67.651.361      L1-dcache-load-misses            #    3,70% of all L1-dcache accesses   ( +-  0,08% )
+            62.678      L1-icache-load-misses                                                   ( +-  3,60% )
+
+           1,07941 +- 0,00631 seconds time elapsed  ( +-  0,58% )
+
+
+=== xor ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 364.526 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         221.14 Mpps 📊 
+    - ⏳ Average Latency:     4.522 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3931% (19654/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 364.167 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         224.48 Mpps 📊 
+    - ⏳ Average Latency:     4.455 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3904% (19518/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 364.699 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         221.88 Mpps 📊 
+    - ⏳ Average Latency:     4.507 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3868% (19338/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 365.132 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         222.00 Mpps 📊 
+    - ⏳ Average Latency:     4.504 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3927% (19633/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 363.768 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         222.88 Mpps 📊 
+    - ⏳ Average Latency:     4.487 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3915% (19573/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 363.217 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         222.46 Mpps 📊 
+    - ⏳ Average Latency:     4.495 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3870% (19350/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 364.537 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         222.91 Mpps 📊 
+    - ⏳ Average Latency:     4.486 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3893% (19464/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 368.041 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         205.41 Mpps 📊 
+    - ⏳ Average Latency:     4.868 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3919% (19595/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 370.173 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         210.31 Mpps 📊 
+    - ⏳ Average Latency:     4.755 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3898% (19490/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 366.502 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         212.01 Mpps 📊 
+    - ⏳ Average Latency:     4.717 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3889% (19447/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+ Performance counter stats for './target/release/ipv4_bloom_cascaded xor' (10 runs):
+
+     3.575.375.081      cycles                                                                  ( +-  0,29% )
+     3.729.677.038      instructions                     #    1,04  insn per cycle              ( +-  0,04% )
+       989.246.145      L1-dcache-loads                                                         ( +-  0,09% )
+       146.954.390      L1-dcache-load-misses            #   14,86% of all L1-dcache accesses   ( +-  0,03% )
+            52.596      L1-icache-load-misses                                                   ( +-  1,28% )
+
+           0,75521 +- 0,00267 seconds time elapsed  ( +-  0,35% )
+
+
+=== flat ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0xC875A155 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         83.93 Mpps 📊 
+    - ⏳ Average Latency:     11.914 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1030% (5148/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0x6679FEB1 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         89.80 Mpps 📊 
+    - ⏳ Average Latency:     11.135 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1007% (5033/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0x72EE7B72 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         87.06 Mpps 📊 
+    - ⏳ Average Latency:     11.486 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1020% (5098/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0x221308B3 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         88.08 Mpps 📊 
+    - ⏳ Average Latency:     11.354 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1027% (5137/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0xD818AF18 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         82.55 Mpps 📊 
+    - ⏳ Average Latency:     12.114 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1016% (5079/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0xEEEFE35 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         86.32 Mpps 📊 
+    - ⏳ Average Latency:     11.585 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1022% (5112/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0x651EC94 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         87.35 Mpps 📊 
+    - ⏳ Average Latency:     11.448 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0995% (4975/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0x7A88DE49 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         89.86 Mpps 📊 
+    - ⏳ Average Latency:     11.129 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1015% (5074/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0x3F933ABC 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         87.26 Mpps 📊 
+    - ⏳ Average Latency:     11.461 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1017% (5084/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0xD3A4E01E 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         87.15 Mpps 📊 
+    - ⏳ Average Latency:     11.475 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1013% (5066/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+ Performance counter stats for './target/release/ipv4_bloom_cascaded flat' (10 runs):
+
+     2.818.271.523      cycles                                                                  ( +-  0,29% )
+     4.444.788.981      instructions                     #    1,58  insn per cycle              ( +-  0,04% )
+       584.491.703      L1-dcache-loads                                                         ( +-  0,12% )
+       166.785.784      L1-dcache-load-misses            #   28,54% of all L1-dcache accesses   ( +-  0,02% )
+            36.141      L1-icache-load-misses                                                   ( +-  5,92% )
+
+           0,59813 +- 0,00263 seconds time elapsed  ( +-  0,44% )
+
+
+=== fastbloom ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         63.15 Mpps 📊 
+    - ⏳ Average Latency:     15.834 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0963% (4817/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         63.05 Mpps 📊 
+    - ⏳ Average Latency:     15.860 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0959% (4796/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         63.53 Mpps 📊 
+    - ⏳ Average Latency:     15.741 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0970% (4851/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         63.54 Mpps 📊 
+    - ⏳ Average Latency:     15.737 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0955% (4773/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         62.83 Mpps 📊 
+    - ⏳ Average Latency:     15.916 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0961% (4806/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         64.23 Mpps 📊 
+    - ⏳ Average Latency:     15.570 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0991% (4956/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         62.04 Mpps 📊 
+    - ⏳ Average Latency:     16.119 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0959% (4794/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         62.29 Mpps 📊 
+    - ⏳ Average Latency:     16.054 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0954% (4768/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         64.13 Mpps 📊 
+    - ⏳ Average Latency:     15.593 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0957% (4783/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         63.07 Mpps 📊 
+    - ⏳ Average Latency:     15.856 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0957% (4783/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+ Performance counter stats for './target/release/ipv4_bloom_cascaded fastbloom' (10 runs):
+
+     3.112.597.973      cycles                                                                  ( +-  0,24% )
+     4.036.280.742      instructions                     #    1,30  insn per cycle              ( +-  0,04% )
+       911.179.141      L1-dcache-loads                                                         ( +-  0,09% )
+        87.759.417      L1-dcache-load-misses            #    9,63% of all L1-dcache accesses   ( +-  0,04% )
+            39.149      L1-icache-load-misses                                                   ( +-  3,39% )
+
+           0,66442 +- 0,00269 seconds time elapsed  ( +-  0,40% )
+

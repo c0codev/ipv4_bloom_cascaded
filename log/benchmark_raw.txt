@@ -1,0 +1,133 @@
+
+=== cascaded ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚀 CASCADED FILTER (L1/L2/L3) 🚀 
+  🤖 DEBUG: Filter initialized with seed: 0xCDBD495E 🎲 
+--------------------------------------------------------------
+ 📜 [Cascaded] 📜 
+    - 📊 Performance:         111.69 Mpps 📊 
+    - ⏳ Average Latency:     8.953 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.4687% (23435/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+=== bloom ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🗃️ THIRD-PARTY BLOOM (crate `bloomfilter`) 🗃️ 
+  🤖 DEBUG: Bloom uses 76846016 bits (9.16 MiB) for n=5000000, p=0.000621 💾 
+--------------------------------------------------------------
+ 📜 [ThirdPartyBloom] 📜 
+    - 📊 Performance:         33.14 Mpps 📊 
+    - ⏳ Average Latency:     30.173 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0628% (3138/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+=== cuckoo ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🐦 THIRD-PARTY CUCKOO (crate `cuckoofilter`) 🐦 
+  🤖 DEBUG: Inserted=5000000/8388608 (Requested=5000000), Load Factor=59.60% 💾 
+  ⌚ Insert latency: mean=53.7ns, p99=110ns, max=279370ns ⌚
+  ❌ Insert failures: 0 / 5000000 ❌ 
+--------------------------------------------------------------
+ 📜 [Cuckoo] 📜 
+    - 📊 Performance:         42.89 Mpps 📊 
+    - ⏳ Average Latency:     23.316 ns/packet ⏳ 
+    - ❌ False Positive Rate: 1.8550% (92752/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+=== xor ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 📦 THIRD-PARTY XOR FILTER (crate `xorf`) 📦 
+  🛠️ Build time (one-shot, 5000000 IPs): 372.972 ms 🛠️ 
+--------------------------------------------------------------
+ 📜 [Xor] 📜 
+    - 📊 Performance:         212.02 Mpps 📊 
+    - ⏳ Average Latency:     4.717 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.3888% (19442/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+=== flat ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ 🚗 FLAT BLOOM FILTER (Old cascaded design) 🚗 
+  🤖 DEBUG: Filter initialized with seed: 0x90DDBA21 🎲 
+--------------------------------------------------------------
+ 📜 [Flat] 📜 
+    - 📊 Performance:         84.20 Mpps 📊 
+    - ⏳ Average Latency:     11.876 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.1012% (5059/5000000) ❌ 
+--------------------------------------------------------------
+
+
+
+=== fastbloom ===
+
+--------------------------------------------------------------
+ ⚙️ Generating shared dataset (5000000 malicious IPs)... 🛠️ 
+ ⚙️ Pre-generating traffic stream (10000000 packets)... 🛠️ 
+ ⚙️ Pre-generating clean samples (5000000 packets)... 🛠️ 
+--------------------------------------------------------------
+
+
+
+
+▶ ✈️ THIRD-PARTY FASTBLOOM ✈️ (crate `fastbloom`)
+--------------------------------------------------------------
+ 📜 [FastBloom] 📜 
+    - 📊 Performance:         63.10 Mpps 📊 
+    - ⏳ Average Latency:     15.849 ns/packet ⏳ 
+    - ❌ False Positive Rate: 0.0981% (4903/5000000) ❌ 
+--------------------------------------------------------------
+
+
